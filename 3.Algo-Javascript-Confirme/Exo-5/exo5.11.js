@@ -22,5 +22,29 @@
 // Vous commencerez par écrire la manière la plus simple, puis vous identifierez le problème, et écrirez une deuxième version permettant de le résoudre.
 
 
-let chevauxPartants = prompt("Nombre de chevaux partants : ")
-let chevauxJoues = prompt("Nombre de chevaux joués : ")
+
+
+
+let num = 10
+
+function factorielle(num) {
+let numfinal = num
+for (let i = num-1 ; i > 0 ; i--)
+{
+    numfinal = numfinal * i
+}
+return numfinal
+}
+
+
+
+function quinte(chevauxPartant, chevauxJoues) {
+    let calculX = factorielle(chevauxPartant) / factorielle(chevauxPartant- chevauxJoues)
+    let calculY = factorielle(chevauxPartant) / (factorielle(chevauxJoues) * (chevauxPartant - chevauxJoues))
+
+    alert ("Dans l’ordre : une chance sur "+ calculX +" de gagner"+ "\n" +
+            "Dans le désordre : une chance sur "+ calculY +" de gagner")
+}
+
+quinte(prompt("Nombre de chevaux partants : "), prompt("Nombre de chevaux joués : "))
+
