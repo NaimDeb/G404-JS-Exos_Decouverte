@@ -39,8 +39,8 @@ return numfinal
 
 
 function quinte(chevauxPartant, chevauxJoues) {
-    let calculX = factorielle(chevauxPartant) / factorielle(chevauxPartant- chevauxJoues)
-    let calculY = factorielle(chevauxPartant) / (factorielle(chevauxJoues) * (chevauxPartant - chevauxJoues))
+    let calculX = factorielle(chevauxPartant) / factorielle(chevauxPartant - chevauxJoues)
+    let calculY = factorielle(chevauxPartant) / (factorielle(chevauxJoues) * factorielle(chevauxPartant - chevauxJoues))
 
     alert ("Dans l’ordre : une chance sur "+ calculX +" de gagner"+ "\n" +
             "Dans le désordre : une chance sur "+ calculY +" de gagner")
